@@ -1,16 +1,15 @@
 import './App.css';
 import Layout from './assets/Components/Layout/Layout';
-import Nabvar from './assets/Components/Navbar/Navbar';
 import Footer from './assets/Components/Footer/Footer';
 import Routes from './assets/Routes/Routes';
-import { useAxios } from './assets/Hooks/useAxios';
+import NavBar from './assets/Components/NavBar/NavBar';
 
 
 function App() {
 
   return (
       <Layout>
-        <Nabvar />
+        <NavBar />
         <Routes />
         <Footer />
       </Layout>
