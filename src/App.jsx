@@ -1,23 +1,19 @@
-
 import './App.css';
 import Layout from './assets/Components/Layout/Layout';
-import Home from './assets/Pages/Home/Home';
-
-
-
-
-import { GlobalStyle } from './assets/Styles/GlobalStyle'
+import Nabvar from './assets/Components/Navbar/Navbar';
+import Footer from './assets/Components/Footer/Footer';
+import Routes from './assets/Routes/Routes';
+import { useAxios } from './assets/Hooks/useAxios';
 
 
 function App() {
 
   return (
-    <> 
-    <Layout>
-      <Home />
-    </Layout>
-    <GlobalStyle />
-    </>
+      <Layout>
+        <Nabvar />
+        <Routes />
+        <Footer />
+      </Layout>
   )
 }
 

@@ -1,30 +1,32 @@
-import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const NavBarContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: fixed;
+    z-index: 100;
     top: 0;
     left: 0;
     height: 65px;
     padding: 10px;
-    width: 99vw;
+    width: 100%;
     background: linear-gradient( 180deg, var(--AzulClaro) 0%, var(--CelesteClaro) 100% );
     color: var(--bgprimario);
     box-shadow: 0px 3px 12px 0px #0099f666;
     -webkit-box-shadow: 0px 3px 12px 0px #0099f666;
     border-bottom: solid 1px var(--AzulClaro);
-    transition: 0.7s;
-    z-index: 15;
-
 `
 
 export const LogoContainer = styled.div`
     display: flex;
     align-items: center;
     gap: 15px;
+    
+    & img {
+        font-size: small;
+    }
 `
 
 export const LogoImg = styled.a`
@@ -48,6 +50,12 @@ export const LogoImg = styled.a`
         padding: 0;
     }  
 
+    & a {
+        @media (max-width: 370px) {
+            font-size: 25px;
+    }
+    }
+
     & span {
         color: var(--AzulOscuro);
         font-weight: 700;
@@ -58,7 +66,39 @@ export const LinksContainer = styled.ul`
     display: flex;
     align-items: center;
     gap: 15px;
-    `
+
+    @media (max-width: 800px) {
+        position: absolute;
+    top: 65px;
+    left: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
+    flex-direction: column;
+    background: linear-gradient(
+        180deg,
+        rgba(4, 63, 110, 0.9) 10%,
+        rgba(0, 153, 246, 0.9) 100%
+    );
+    border: 1px solid var(--AzulClaro);
+    border-top: 0px;
+    border-radius: 0px 0px 15px 0;
+    align-items: flex-start;
+    padding: 45px 60px;
+    gap: 25px;
+    box-shadow: 0px 3px 12px 0px #0a1d29c5;
+    -webkit-box-shadow: 0px 3px 20px 0px #0a1d29c5;
+    z-index: 2;
+    
+    
+    transition: all 0.5s ease-in-out;
+    }
+    
+    
+`
+
+export const MenuLinksContainer = styled.ul`
+    display: flex;
+    align-items: center;
+    gap: 15px;
+`
 
 export const NavLinksLiStyled = styled.li`
     position: relative;
@@ -131,13 +171,15 @@ export const NavLinkStyled = styled.a`
         transform-origin: bottom left;
         transform: scaleX(1);
     }
+
+    
 `
 export const NavMenuStyled = styled.a`
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     color: var(--Blanco);
-    font-size: 40px;
+    font-size: 35px;
     cursor: pointer;
     padding: 5px;
     border-radius: 20px;
@@ -154,6 +196,10 @@ export const NavMenuStyled = styled.a`
     );
         font-weight: 600;
     }
+
+    @media (max-width: 800px) {
+        display: flex
+    }
 `
 
 export const NavCartStyled = styled.a`
@@ -162,11 +208,10 @@ export const NavCartStyled = styled.a`
     align-items: center;
     background: linear-gradient(215deg, var(--CelesteClaro) 0%, var(--Azul) 50%);
     color: var(--Blanco);
-    font-size: 40px;
+    font-size: 35px;
     border-radius: 20px;
     cursor: pointer;
     padding: 5px;
-    margin-right: 20px;
 
     &:hover {
         background: linear-gradient(
@@ -180,5 +225,3 @@ export const NavCartStyled = styled.a`
     font-weight: 600;
     }
 `
-
-

@@ -15,4 +15,4 @@ const Benefis = () => {
     )
 }
 
-export default Benefis
+export default Benefis;

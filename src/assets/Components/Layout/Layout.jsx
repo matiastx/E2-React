@@ -1,27 +1,16 @@
-import styled from "styled-components";
-import NavBar from "../NavBar/NavBar";
-import Footer from "../Footer/Footer";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import { LayoutWrapper } from "./Layout.Styles";
 
-
-const LayoutContainerStyled = styled.div`
-    min-height: 100vh;
-    height: auto;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-`;
-
-const ContentContainerStyled = styled.div`
-    height: calc(100vh - 120px);
-`;
 
 const Layout = ({ children }) => {
-    return (
-        <LayoutContainerStyled>
-            <NavBar />  
-            <ContentContainerStyled>{children}</ContentContainerStyled>
-        </LayoutContainerStyled>
-    );
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
+
+    return <LayoutWrapper>{children}</LayoutWrapper>;
 }
 
 export default Layout;

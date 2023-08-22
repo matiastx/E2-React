@@ -1,9 +1,12 @@
-import React from 'react'
+import { ProductsWrapper } from "./Products.Style"
+import Crypto from "../../Components/Crypto/Crypto";
 
-const Products = () => {
+const Productos = () => {
     return (
-        <h1>Productos</h1>
+        <ProductsWrapper>
+            <Crypto />
+        </ProductsWrapper>
     )
 }
 
-export default Products
+export default Productos;

@@ -9,6 +9,8 @@ export const StyledButton = styled(motion.button)`
     padding: 10px 25px;
     color: var(--GrisClaro);
     width: 200px;
+    min-width: 200px;
+
     text-align: center;
     box-shadow: 0px 3px 12px 0px var(--Gris2);
     -webkit-box-shadow: 0px 3px 12px 0px var(--Gris2);
@@ -45,6 +47,7 @@ export const StyledCryptoButton = styled(motion.button)`
     padding: 10px 25px;
     color: var(--GrisClaro);
     width: 200px;
+    min-width: 200px;
     height: 40px;
     text-align: center;
     box-shadow: 0px 3px 12px 0px var(--Gris2);

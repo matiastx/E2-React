@@ -75,6 +75,31 @@ export const AboutUsMapContainer = styled.div`
     -webkit-box-shadow: 0px 3px 10px 0px var(--Gris2);
     border-radius: 15px;
     overflow: hidden;
+    transition: all 0.5s;
+
+    @media (max-width: 1000px) {
+        iframe {
+            width: 600px;
+            height: 500px;
+            transition: all 0.5s;
+        }
+    }
+    
+    @media (max-width: 760px) {
+        iframe {
+            width: 300px;
+            height: 300px;
+            transition: all 0.5s;
+        }
+    }
+
+    @media (max-width: 400px) {
+        iframe {
+            width: 250px;
+            height: 250px;
+            transition: all 0.5s;
+        }
+    }
 `
 
 export const AboutUsSocial = styled.div`
@@ -98,6 +123,12 @@ export const AboutUsSocialDetail = styled.div`
     width: 100%;
     gap: 25px;
     flex-direction: column;
+
+    & img {
+        @media (max-width: 800px) {
+        width: 250px;
+    }
+    }
 
 `
 
@@ -128,6 +159,12 @@ export const AboutUsSocialList = styled.ul`
         font-size: 30px;
         cursor: pointer;
         transition: all 0.5s;
+
+        
+        @media (max-width: 800px) {
+        font-size: 25px;
+        }
+    
     }
 
     & li span {
@@ -141,5 +178,9 @@ export const AboutUsSocialList = styled.ul`
         align-self: center;
         transition: all 0.5s;
         cursor: pointer;
+
+        @media (max-width: 800px) {
+        font-size: 25px;
+        margin: 0px 5px;
     }
 `

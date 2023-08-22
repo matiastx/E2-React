@@ -2,13 +2,13 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
 
-@import url(https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto+Condensed:wght@300&family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,600;8..144,700&display=swap);
 
 :root {
   /* colors */
+  --bgprimarioBLK: #121314;
   --bgprimario: #f6f6f6;
   --GrisClaro: #d9d9d9;
-  --CelesteClaro: #0099f6;
+  --CelesteClaro: #0099f9;
   --Celeste: #026cb2;
   --AzulClaro: #043f6e;
   --Azul: #1e50ff;
@@ -38,6 +38,7 @@ export const GlobalStyle = createGlobalStyle`
   text-decoration: none;
   list-style-type: none;
   font-family: 'Roboto Condensed', sans-serif;
+  /* border: #0099f6 solid 1px; */
 }
 
 body {

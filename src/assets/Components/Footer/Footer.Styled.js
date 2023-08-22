@@ -7,6 +7,7 @@ export const FooterContainer = styled.footer`
     justify-content: center;
     text-align: center;
     padding: 20px;
+    /* margin: 0; */
     border-top: solid 1px var(--AzulOscuro);
     background: linear-gradient(
         180deg,
@@ -15,8 +16,8 @@ export const FooterContainer = styled.footer`
     );
     color: var(--bgprimario);
     font-size: 20px;
-    height: 70px;
-    max-width: 1200px
+    border-radius: 6px 6px 0 0;
+
 
     & b {
         color: var(--Gris2);
